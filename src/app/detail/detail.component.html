@@ -1,0 +1,52 @@
+<br>
+<div class="card container" style="width: 800px;">
+  <div *ngIf="currentUser">
+    <table class="table">
+      <h2><a>Detail Profile</a></h2>
+      <tr>
+        <td>Picture</td>
+        <td>
+          <img>
+        </td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Username</td>
+        <td><label>{{this.currentUser.username}}</label></td>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.0/lazysizes.min.js" async=""></script>
+        <td><a [routerLink]="['overview']" class="lazyload">Overview</a></td>
+      </tr>
+      <tr>
+        <td>Full Name</td>
+        <td><label>{{this.currentUser.fullName}}</label></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Email</td>
+        <td><label>{{this.currentUser.email}}</label></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Phone</td>
+        <td><label>{{this.currentUser.phone}}</label></td>
+        <td><a [routerLink]="['contact']">Contact</a></td>
+      </tr>
+      <tr>
+        <td>Address</td>
+        <td><label>{{this.currentUser.address}}</label></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td><button class="btn btn-success" routerLink="add">Update</button></td>
+      </tr>
+    </table>
+  </div>
+</div>
+<br>
+<br>
+
+<div>
+  <router-outlet></router-outlet>
+</div>
