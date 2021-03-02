@@ -1,0 +1,65 @@
+<br>
+<div class="card container" style="width: 800px;">
+  <div class="">
+    <table class="table">
+      <h2><a>Detail Profile</a></h2>
+      <tr>
+        <td>Picture</td>
+        <td>
+          <input type="file" (click)="addImage($event)">
+        </td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Username</td>
+        <td><input type="text" class="form-control"
+                   id="username"
+                   required
+                   [(ngModel)]="User.username"
+                   name="username"></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Full Name</td>
+        <td><input type="text" class="form-control"
+                   id="fullname"
+                   required
+                   [(ngModel)]="User.fullname"
+                   name="fullname"></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Email</td>
+        <td><input type="text" class="form-control"
+                   id="email"
+                   required
+                   [(ngModel)]="User.email"
+                   name="email"></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Phone</td>
+        <td><input type="text" class="form-control"
+                   id="phone"
+                   required
+                   [(ngModel)]="User.phone"
+                   name="phone"></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Address</td>
+        <td><input type="text" class="form-control"
+                   id="address"
+                   required
+                   [(ngModel)]="User.address"
+                   name="address"></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td><button class="btn btn-success" (click)="updateUser()">Save</button></td>
+      </tr>
+    </table>
+  </div>
+</div>
